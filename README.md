@@ -96,7 +96,7 @@ Complete PAM practice environment aligned with CyberArk PAM-DEF concepts:
 <br/>KV v2 engine management
 </td>
 <td align="center" width="33%">
-<img src="docs/screenshots/vault_creds_1764618961178.png" alt="Credentials"/>
+<img src="docs/images/vault-creds-new.png" alt="Credentials"/>
 <br/><strong>Dynamic Credentials</strong>
 <br/>Database secret generation
 </td>
@@ -113,7 +113,7 @@ Complete PAM practice environment aligned with CyberArk PAM-DEF concepts:
 <br/>Certificate authority operations
 </td>
 <td align="center" width="50%">
-<img src="docs/screenshots/vault_audit_1764619004996.png" alt="Audit"/>
+<img src="docs/images/vault-audit-new.png" alt="Audit"/>
 <br/><strong>Audit Logs</strong>
 <br/>Compliance-ready audit trail
 </td>
