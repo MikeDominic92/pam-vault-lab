@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Key, RefreshCw, ShieldCheck, FileText, ChevronRight, Lock } from 'lucide-react';
+import { LayoutDashboard, Key, RefreshCw, ShieldCheck, FileText, ChevronRight, Lock, LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
@@ -19,15 +19,15 @@ export function VaultSidebar() {
     const pathname = usePathname();
 
     return (
-        <div className="w-64 border-r border-white/5 bg-obsidian-black h-screen fixed left-0 top-0 flex flex-col z-50">
-            <div className="p-6 flex items-center gap-3 border-b border-white/5">
-                <div className="w-8 h-8 rounded-lg bg-vault-gold/10 flex items-center justify-center border border-vault-gold/30">
-                    <Lock className="w-5 h-5 text-vault-gold" />
+        <div className="w-64 h-[calc(100vh-2rem)] glass-panel border-r-0 flex flex-col fixed left-4 top-4 z-50 rounded-2xl">
+            <div className="h-20 flex items-center px-6 border-b border-white/10">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-tr from-cyber-cyan to-cyber-purple flex items-center justify-center border border-white/10 shadow-[0_0_10px_rgba(6,182,212,0.3)] mr-3">
+                    <Lock className="w-6 h-6 text-white" />
                 </div>
-                <span className="font-bold text-xl text-ghost-white tracking-tight">Vault Lab</span>
+                <span className="font-orbitron font-bold text-lg tracking-tight text-white">Vault<span className="text-cyber-cyan neon-text-cyan">Lab</span></span>
             </div>
 
-            <nav className="flex-1 p-4 space-y-1">
+            <nav className="flex-1 p-4 space-y-2">
                 {navItems.map((item) => {
                     const isActive = pathname === item.href;
                     return (
@@ -35,35 +35,40 @@ export function VaultSidebar() {
                             key={item.href}
                             href={item.href}
                             className={cn(
-                                "flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 group relative overflow-hidden",
+                                "flex items-center px-3 py-3 rounded-xl text-sm font-medium transition-all duration-300 group relative overflow-hidden",
                                 isActive
-                                    ? "bg-white/5 text-vault-gold"
-                                    : "text-slate-gray hover:text-ghost-white hover:bg-white/5"
+                                    ? "bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/20 shadow-[0_0_10px_rgba(6,182,212,0.1)]"
+                                    : "text-gray-400 hover:bg-white/5 hover:text-white hover:pl-4"
                             )}
                         >
                             {isActive && (
                                 <motion.div
                                     layoutId="activeNav"
-                                    className="absolute left-0 top-0 bottom-0 w-1 bg-vault-gold shadow-[0_0_10px_rgba(255,215,0,0.5)]"
+                                    className="absolute left-0 top-0 bottom-0 w-1 bg-cyber-cyan shadow-[0_0_10px_rgba(6,182,212,0.5)]"
                                 />
                             )}
-                            <item.icon className={cn("w-4 h-4 transition-colors", isActive ? "text-vault-gold" : "group-hover:text-ghost-white")} />
+                            <item.icon className={cn("w-4 h-4 mr-3 transition-colors", isActive ? "text-cyber-cyan" : "text-gray-500 group-hover:text-white")} />
                             <span className="font-medium text-sm">{item.name}</span>
-                            {isActive && <ChevronRight className="w-4 h-4 ml-auto text-vault-gold/50" />}
+                            {isActive && <ChevronRight className="w-4 h-4 ml-auto text-cyber-cyan/50" />}
                         </Link>
                     );
                 })}
             </nav>
 
-            <div className="p-4 border-t border-white/5">
-                <div className="p-4 rounded-xl bg-gradient-to-br from-vault-surface to-black border border-white/5">
+            <div className="p-4 border-t border-white/10 space-y-2">
+                <div className="p-4 rounded-xl bg-black/40 border border-white/5">
                     <div className="flex items-center gap-2 mb-2">
-                        <div className="w-2 h-2 rounded-full bg-emerald-success animate-pulse" />
-                        <span className="text-xs font-medium text-emerald-success">Unsealed</span>
+                        <div className="w-2 h-2 rounded-full bg-cyber-green animate-pulse shadow-[0_0_5px_#10b981]" />
+                        <span className="text-xs font-medium text-cyber-green font-mono">Unsealed</span>
                     </div>
-                    <p className="text-xs text-slate-gray font-mono">v1.15.2+ent</p>
+                    <p className="text-xs text-gray-500 font-mono">v1.15.2+ent</p>
                 </div>
+                <button className="flex items-center w-full px-3 py-2 rounded-lg text-sm font-medium text-red-400 hover:bg-red-500/10 hover:text-red-300 transition-colors">
+                    <LogOut className="w-5 h-5 mr-3" />
+                    Sign Out
+                </button>
             </div>
         </div>
     );
 }
+

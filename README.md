@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/screenshots/vault_dashboard_1764618915895.png" alt="PAM Vault Lab" width="800"/>
+  <img src="docs/images/dashboard-new.png" alt="PAM Vault Lab" width="800"/>
 </p>
 
 <h1 align="center">PAM Vault Lab</h1>
@@ -63,7 +63,7 @@ Modern privileged access requires:
 ## The Solution: PAM Vault Lab
 
 <p align="center">
-  <img src="docs/screenshots/vault_secrets_1764918939082.png" alt="Secrets Management" width="800"/>
+  <img src="docs/images/secrets-new.png" alt="Secrets Management" width="800"/>
 </p>
 
 Complete PAM practice environment aligned with CyberArk PAM-DEF concepts:
@@ -86,12 +86,12 @@ Complete PAM practice environment aligned with CyberArk PAM-DEF concepts:
 <table>
 <tr>
 <td align="center" width="33%">
-<img src="docs/screenshots/vault_dashboard_1764618915895.png" alt="Dashboard"/>
+<img src="docs/images/dashboard-new.png" alt="Dashboard"/>
 <br/><strong>Vault Dashboard</strong>
 <br/>Stealth dark theme
 </td>
 <td align="center" width="33%">
-<img src="docs/screenshots/vault_secrets_1764618939082.png" alt="Secrets"/>
+<img src="docs/images/secrets-new.png" alt="Secrets"/>
 <br/><strong>Secrets Browser</strong>
 <br/>KV v2 engine management
 </td>
@@ -108,7 +108,7 @@ Complete PAM practice environment aligned with CyberArk PAM-DEF concepts:
 <table>
 <tr>
 <td align="center" width="50%">
-<img src="docs/screenshots/vault_pki_1764618983762.png" alt="PKI"/>
+<img src="docs/images/pki-new.png" alt="PKI"/>
 <br/><strong>PKI Management</strong>
 <br/>Certificate authority operations
 </td>
